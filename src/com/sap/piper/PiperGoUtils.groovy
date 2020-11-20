@@ -41,7 +41,7 @@ class PiperGoUtils implements Serializable {
             String version
             libraries.each {lib ->
                 if (lib.name == 'piper-lib-os') {
-                    version = "lib.version"
+                    version = lib.version
                 }
             }
 
