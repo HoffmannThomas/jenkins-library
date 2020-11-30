@@ -8,20 +8,15 @@ steps:
       - 'invalid'
       - 'question'
       - 'wontfix'
-    owner: 'SAP'
+    owner: 'HoffmannThomas'
     repository: 'jenkins-library'
     releaseBodyHeader: ''
   githubCreatePullRequest:
     base: master
-    owner: 'SAP'
+    owner: 'HoffmannThomas'
     repository: 'jenkins-library'
     labels:
       - 'REVIEW'
       - 'go-piper'
     assignees:
-      - 'marcusholl'
-      - 'daniel-kurzynski'
-      - 'fwilhe'
-      - 'CCFenner'
-      - 'OliverNocon'
-      - 'nevskrem'
+      - 'HoffmannThomas'
