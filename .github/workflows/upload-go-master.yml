@@ -1,6 +1,7 @@
 name: Publish master branch binary
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
