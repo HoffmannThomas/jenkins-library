@@ -22,3 +22,8 @@ jobs:
                   -X github.com/HoffmannThomas/jenkins-library/pkg/telemetry.LibraryRepository=https://github.com/${GITHUB_REPOSITORY}.git" \
             -o piper_master .
           stat --printf="File size of piper_master in bytes: %s\n" piper_master
+      - uses: SAP/project-piper-action@master
+        with:
+          piper-version: master
+          command: githubPublishRelease
+          flags: --token ${{ secrets.GITHUB_TOKEN }} --version latest --assetPath ./piper_master
