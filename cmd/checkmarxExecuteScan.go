@@ -27,7 +27,7 @@ import (
 
 func checkmarxExecuteScan(config checkmarxExecuteScanOptions, telemetryData *telemetry.CustomData, influx *checkmarxExecuteScanInflux) {
 	client := &piperHttp.Client{}
- 	options := piperHttp.ClientOptions{MaxRetries: config.MaxRetries}
+ 	//options := piperHttp.ClientOptions{MaxRetries: config.MaxRetries}
 	client.SetOptions(options) 
 	sys, err := checkmarx.NewSystemInstance(client, config.ServerURL, config.Username, config.Password)
 	if err != nil {
