@@ -2,10 +2,13 @@ name: Publish master branch binary
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
-      - '1.71.*'
+   inputs:
+        logLevel:
+          description: 'Log level'     
+          required: true
+          default: 'warning'
+        tags:
+          description: 'Test scenario tags'  
 
 jobs:
   build:
