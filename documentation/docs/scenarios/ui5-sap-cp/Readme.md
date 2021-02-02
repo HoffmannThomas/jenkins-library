@@ -6,7 +6,7 @@ Build an application based on SAPUI5 or SAP Fiori with Jenkins and deploy the bu
 
 * You have installed the Java Runtime Environment 8.
 * You have installed Jenkins 2.60.3 or higher.
-* You have set up Project “Piper”. See [README](https://github.com/SAP/jenkins-library/blob/master/README.md).
+* You have set up Project “Piper”. See [README](https://github.com/HoffmannThomas/jenkins-library/blob/master/README.md).
 * You have installed the Multi-Target Application (MTA) Archive Builder 1.0.6 or newer. See [SAP Development Tools](https://tools.hana.ondemand.com/#cloud).
 * You have installed Node.js including node and npm. See [Node.js](https://nodejs.org/en/download/).
 * You have installed the SAP Cloud Platform Neo Environment SDK. See [SAP Development Tools](https://tools.hana.ondemand.com/#cloud).
@@ -19,10 +19,10 @@ On the project level, provide and adjust the following template:
 
 | File Name | Description | Position |
 |-----|-----|-----|
-| [`.npmrc`](https://github.com/SAP/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/.npmrc) | This file contains a reference to the SAP NPM registry (`@sap:registry https://npm.sap.com`), which is required to fetch the dependencies required to build the application. | Place the `.npmrc` file in the root directory of your project. |
-| [`mta.yaml`](https://github.com/SAP/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/mta.yaml) | This file controls the behavior of the MTA toolset. | Place the `mta.yaml` file in your application root folder and adjust the values in brackets with your data. |
-| [`package.json`](https://github.com/SAP/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/package.json) | This file lists the required development dependencies for the build. | Add the content of the `package.json` file to your existing `package.json` file. |
-| [`Gruntfile.js`](https://github.com/SAP/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/Gruntfile.js) | This file controls the grunt build. By default the tasks `clean`, `build`, and `lint` are executed. | Place the `Gruntfile.js` in the root directory of your project. |
+| [`.npmrc`](https://github.com/HoffmannThomas/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/.npmrc) | This file contains a reference to the SAP NPM registry (`@sap:registry https://npm.sap.com`), which is required to fetch the dependencies required to build the application. | Place the `.npmrc` file in the root directory of your project. |
+| [`mta.yaml`](https://github.com/HoffmannThomas/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/mta.yaml) | This file controls the behavior of the MTA toolset. | Place the `mta.yaml` file in your application root folder and adjust the values in brackets with your data. |
+| [`package.json`](https://github.com/HoffmannThomas/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/package.json) | This file lists the required development dependencies for the build. | Add the content of the `package.json` file to your existing `package.json` file. |
+| [`Gruntfile.js`](https://github.com/HoffmannThomas/jenkins-library/blob/master/documentation/docs/scenarios/ui5-sap-cp/files/Gruntfile.js) | This file controls the grunt build. By default the tasks `clean`, `build`, and `lint` are executed. | Place the `Gruntfile.js` in the root directory of your project. |
 
 ## Context
 

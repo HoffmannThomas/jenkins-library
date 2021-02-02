@@ -16,11 +16,11 @@ import (
 	"encoding/json"
 	"encoding/xml"
 
-	"github.com/SAP/jenkins-library/pkg/checkmarx"
-	piperHttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/checkmarx"
+	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/bmatcuk/doublestar"
 	"github.com/pkg/errors"
 )

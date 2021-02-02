@@ -2,11 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/versioning"
+	"github.com/HoffmannThomas/jenkins-library/pkg/versioning"
 	"testing"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/go-git/go-git/v5"

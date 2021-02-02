@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/maven"
+	"github.com/HoffmannThomas/jenkins-library/pkg/maven"
 	"github.com/stretchr/testify/assert"
 )
 

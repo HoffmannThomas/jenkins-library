@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"net/url"
 
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 )
 
 // eventType

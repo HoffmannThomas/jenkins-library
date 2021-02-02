@@ -2,7 +2,7 @@
 
 Configure your project through a yml-file, which is located at `.pipeline/config.yml` in the **master branch** of your source code repository.
 
-Your configuration inherits from the default configuration located at [https://github.com/SAP/jenkins-library/blob/master/resources/default_pipeline_environment.yml](https://github.com/SAP/jenkins-library/blob/master/resources/default_pipeline_environment.yml).
+Your configuration inherits from the default configuration located at [https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/default_pipeline_environment.yml](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/default_pipeline_environment.yml).
 
 !!! caution "Adding custom parameters"
     Please note that adding custom parameters to the configuration is at your own risk.
@@ -22,7 +22,7 @@ Configuration of the Piper steps as well the Piper templates can be done in a hi
 ## Collecting telemetry data
 
 In order to improve this Jenkins library we are collecting telemetry data.
-Data is send using [`com.sap.piper.pushToSWA`](https://github.com/SAP/jenkins-library/blob/master/src/com/sap/piper/Utils.groovy)
+Data is send using [`com.sap.piper.pushToSWA`](https://github.com/HoffmannThomas/jenkins-library/blob/master/src/com/sap/piper/Utils.groovy)
 
 Following data (non-personal) is collected for example:
 
@@ -37,7 +37,7 @@ Following data (non-personal) is collected for example:
 
     This is done with either of the following two ways:
 
-    1. General deactivation in your `.pipeline/config.yml` file by setting the configuration parameter `general -> collectTelemetryData: false` (default setting can be found in the [library defaults](https://github.com/SAP/jenkins-library/blob/master/resources/default_pipeline_environment.yml)).
+    1. General deactivation in your `.pipeline/config.yml` file by setting the configuration parameter `general -> collectTelemetryData: false` (default setting can be found in the [library defaults](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/default_pipeline_environment.yml)).
 
         **Please note: this will only take effect in all steps if you run `setupCommonPipelineEnvironment` at the beginning of your pipeline**
 
@@ -78,7 +78,7 @@ commonPipelineEnvironment.configuration.general.gitSshKeyCredentialsId
 
 Within library steps the `ConfigurationHelper` object is used.
 
-You can see its usage in all the Piper steps, for example [newmanExecute](https://github.com/SAP/jenkins-library/blob/master/vars/newmanExecute.groovy#L23).
+You can see its usage in all the Piper steps, for example [newmanExecute](https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/newmanExecute.groovy#L23).
 
 ## Custom default configuration
 

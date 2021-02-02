@@ -2,7 +2,7 @@ package maven
 
 import (
 	"errors"
-	"github.com/SAP/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
 	"path/filepath"
 
 	"net/http"

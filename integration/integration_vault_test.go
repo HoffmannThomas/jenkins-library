@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/vault"
+	"github.com/HoffmannThomas/jenkins-library/pkg/vault"
 	"github.com/hashicorp/vault/api"
 	"github.com/stretchr/testify/assert"
 	"github.com/testcontainers/testcontainers-go"

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 )
 
 // ReadServiceKey reads a cloud foundry service key based on provided service instance and service key name parameters

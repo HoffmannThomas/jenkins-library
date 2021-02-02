@@ -2,11 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/cloudfoundry"
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/mock"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/yaml"
+	"github.com/HoffmannThomas/jenkins-library/pkg/cloudfoundry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/yaml"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

@@ -12,12 +12,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/abaputils"
-	"github.com/SAP/jenkins-library/pkg/command"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/abaputils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/ghodss/yaml"
 	"github.com/pkg/errors"
 )

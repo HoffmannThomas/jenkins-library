@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/cloudfoundry"
-	"github.com/SAP/jenkins-library/pkg/command"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/cloudfoundry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/ghodss/yaml"
 	"github.com/pkg/errors"
 )

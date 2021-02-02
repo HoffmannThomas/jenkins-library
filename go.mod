@@ -1,4 +1,4 @@
-module github.com/SAP/jenkins-library
+module github.com/HoffmannThomas/jenkins-library
 
 go 1.13
 

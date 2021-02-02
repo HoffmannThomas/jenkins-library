@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/SAP/jenkins-library.svg?branch=master)](https://travis-ci.org/SAP/jenkins-library)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0e6a23344616e29b4ed0/maintainability)](https://codeclimate.com/github/SAP/jenkins-library/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0e6a23344616e29b4ed0/test_coverage)](https://codeclimate.com/github/SAP/jenkins-library/test_coverage)
-[![Go Report Card](https://goreportcard.com/badge/github.com/SAP/jenkins-library)](https://goreportcard.com/report/github.com/SAP/jenkins-library)
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/jenkins-library)](https://api.reuse.software/info/github.com/SAP/jenkins-library)
+[![Go Report Card](https://goreportcard.com/badge/github.com/HoffmannThomas/jenkins-library)](https://goreportcard.com/report/github.com/HoffmannThomas/jenkins-library)
+[![REUSE status](https://api.reuse.software/badge/github.com/HoffmannThomas/jenkins-library)](https://api.reuse.software/info/github.com/HoffmannThomas/jenkins-library)
 
 # Project Piper Repository
 
@@ -30,7 +30,7 @@ before opening a pull request.
 
 
 [piper-library-user-doc]: https://sap.github.io/jenkins-library/
-[piper-library-issues]: https://github.com/SAP/jenkins-library/issues
+[piper-library-issues]: https://github.com/HoffmannThomas/jenkins-library/issues
 [piper-library-license]: ./LICENSE
 [piper-library-contribution]: .github/CONTRIBUTING.md
 [google-group]: https://groups.google.com/forum/#!forum/project-piper

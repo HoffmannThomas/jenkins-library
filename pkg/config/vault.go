@@ -3,7 +3,7 @@ package config
 import (
 	"path"
 
-	"github.com/SAP/jenkins-library/pkg/vault"
+	"github.com/HoffmannThomas/jenkins-library/pkg/vault"
 	"github.com/hashicorp/vault/api"
 )
 

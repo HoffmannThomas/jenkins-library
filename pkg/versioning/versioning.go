@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 
-	"github.com/SAP/jenkins-library/pkg/maven"
+	"github.com/HoffmannThomas/jenkins-library/pkg/maven"
 )
 
 // Coordinates to address the artifact

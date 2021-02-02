@@ -13,8 +13,8 @@ import (
 
 	"github.com/Masterminds/sprig"
 
-	"github.com/SAP/jenkins-library/pkg/config"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/config"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 )
 
 type stepInfo struct {
@@ -47,14 +47,14 @@ import (
 	"time"
 
 	{{ if .ExportPrefix -}}
-	{{ .ExportPrefix }} "github.com/SAP/jenkins-library/cmd"
+	{{ .ExportPrefix }} "github.com/HoffmannThomas/jenkins-library/cmd"
 	{{ end -}}
-	"github.com/SAP/jenkins-library/pkg/config"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/config"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	{{ if .OutputResources -}}
-	"github.com/SAP/jenkins-library/pkg/piperenv"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperenv"
 	{{ end -}}
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/spf13/cobra"
 )
 
@@ -188,9 +188,9 @@ func Test{{.CobraCmdFuncName}}(t *testing.T) {
 
 const stepGoImplementationTemplate = `package cmd
 import (
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 )
 
 func {{.StepName}}(config {{ .StepName }}Options, telemetryData *telemetry.CustomData{{ range $notused, $oRes := .OutputResources}}, {{ index $oRes "name" }} *{{ index $oRes "objectname" }}{{ end }}) {
@@ -200,7 +200,7 @@ func {{.StepName}}(config {{ .StepName }}Options, telemetryData *telemetry.Custo
 	c.Stdout(log.Writer())
 	c.Stderr(log.Writer())
 
-	// for http calls import  piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	// for http calls import  piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	// and use a  &piperhttp.Client{} in a custom system
 	// Example: step checkmarxExecuteScan.go
 

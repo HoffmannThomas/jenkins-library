@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 )
 
 //LoginCheck checks if user is logged in to Cloud Foundry with the receiver provided

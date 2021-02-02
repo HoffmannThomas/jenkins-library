@@ -5,8 +5,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/SAP/jenkins-library/pkg/config"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/config"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

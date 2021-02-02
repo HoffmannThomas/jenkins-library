@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/maven"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/maven"
 
 	"github.com/pkg/errors"
 )

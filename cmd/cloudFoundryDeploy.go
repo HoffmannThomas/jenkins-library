@@ -4,12 +4,12 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/cloudfoundry"
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
-	"github.com/SAP/jenkins-library/pkg/yaml"
+	"github.com/HoffmannThomas/jenkins-library/pkg/cloudfoundry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/yaml"
 	"github.com/elliotchance/orderedmap"
 	"github.com/pkg/errors"
 	"io"
@@ -58,7 +58,7 @@ func cloudFoundryDeploy(config cloudFoundryDeployOptions, telemetryData *telemet
 	c.Stdout(log.Writer())
 	c.Stderr(log.Writer())
 
-	// for http calls import  piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	// for http calls import  piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	// and use a  &piperhttp.Client{} in a custom system
 	// Example: step checkmarxExecuteScan.go
 

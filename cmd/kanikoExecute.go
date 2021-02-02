@@ -6,13 +6,13 @@ import (
 	"os"
 	"strings"
 
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	"github.com/pkg/errors"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 )
 
 func kanikoExecute(config kanikoExecuteOptions, telemetryData *telemetry.CustomData) {

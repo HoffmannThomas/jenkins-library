@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/checkmarx"
+	"github.com/HoffmannThomas/jenkins-library/pkg/checkmarx"
 	"github.com/stretchr/testify/assert"
 )
 

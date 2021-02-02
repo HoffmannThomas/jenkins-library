@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	pkgutil "github.com/GoogleContainerTools/container-diff/pkg/util"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/stretchr/testify/assert"
 )
 

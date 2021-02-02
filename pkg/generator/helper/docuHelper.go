@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/SAP/jenkins-library/pkg/config"
+	"github.com/HoffmannThomas/jenkins-library/pkg/config"
 )
 
 var stepParameterNames []string

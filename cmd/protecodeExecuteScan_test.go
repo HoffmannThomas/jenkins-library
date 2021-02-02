@@ -17,7 +17,7 @@ import (
 	"time"
 
 	pkgutil "github.com/GoogleContainerTools/container-diff/pkg/util"
-	"github.com/SAP/jenkins-library/pkg/protecode"
+	"github.com/HoffmannThomas/jenkins-library/pkg/protecode"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

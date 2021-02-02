@@ -62,7 +62,7 @@ Shared libraries extending the Jenkins pipeline are defined within the Jenkins s
 
 1. For **Source Code Management**, choose **Git**.
 
-1. For **Project Repository**, enter the GitHub URL of the project Piper shared library `https://github.com/SAP/jenkins-library`.
+1. For **Project Repository**, enter the GitHub URL of the project Piper shared library `https://github.com/HoffmannThomas/jenkins-library`.
    <p align="center">
    ![Library Setup](../images/JenkinsConfigSystemLibrary-Edit.png "Library Setup")
    </p>
@@ -110,7 +110,7 @@ If you face such a [user permission issue][piper-issue-781], choose between the 
 [jenkins-doc-client]: https://jenkins.io/doc/book/managing/cli/
 [jenkins-docker-image]: https://github.com/jenkinsci/docker/
 [piper-library-pages]: https://sap.github.io/jenkins-library
-[piper-issue-781]: https://github.com/SAP/jenkins-library/issues/781
+[piper-issue-781]: https://github.com/HoffmannThomas/jenkins-library/issues/781
 
 [devops-docker-images]: https://github.com/SAP/devops-docker-images
 [devops-cxs-plugins]: https://github.com/SAP/devops-docker-cx-server/blob/master/jenkins-master/plugins.txt

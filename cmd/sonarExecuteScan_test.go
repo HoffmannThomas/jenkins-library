@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	piperHttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/mock"
-	FileUtils "github.com/SAP/jenkins-library/pkg/piperutils"
+	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
+	FileUtils "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

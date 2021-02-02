@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperenv"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperenv"
 
 	"github.com/ghodss/yaml"
 	"github.com/pkg/errors"

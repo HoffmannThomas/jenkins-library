@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	piperDocker "github.com/SAP/jenkins-library/pkg/docker"
-	"github.com/SAP/jenkins-library/pkg/log"
-	StepResults "github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/protecode"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	piperDocker "github.com/HoffmannThomas/jenkins-library/pkg/docker"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	StepResults "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/protecode"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 )
 
 type protecodeData struct {

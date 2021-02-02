@@ -39,7 +39,7 @@ func runVersionCommand(t *testing.T, commitID, tag string) string {
 
 	//
 	// needs to be set in the free wild by the build process:
-	// go build -ldflags "-X github.com/SAP/jenkins-library/cmd.GitCommit=${GIT_COMMIT} -X github.com/SAP/jenkins-library/cmd.GitTag=${GIT_TAG}"
+	// go build -ldflags "-X github.com/HoffmannThomas/jenkins-library/cmd.GitCommit=${GIT_COMMIT} -X github.com/HoffmannThomas/jenkins-library/cmd.GitTag=${GIT_TAG}"
 	if len(commitID) > 0 {
 		GitCommit = commitID
 	}

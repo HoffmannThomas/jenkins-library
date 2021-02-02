@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/pkg/errors"
 )
 

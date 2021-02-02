@@ -14,7 +14,7 @@ To get you started quickly, project "Piper" offers you the following artifacts:
     * [SAP Cloud SDK Pipeline][cloud-sdk-pipeline]
 * [A shared library][piper-library] that contains reusable step implementations, which enable you to customize our preconfigured pipelines, or to even build your own customized ones
 * A standalone [command line utility](cli) for Linux and a [GitHub Action](https://github.com/SAP/project-piper-action)
-    * Note: This version is still in early development. Feel free to use it and [provide feedback](https://github.com/SAP/jenkins-library/issues), but don't expect all the features of the Jenkins library
+    * Note: This version is still in early development. Feel free to use it and [provide feedback](https://github.com/HoffmannThomas/jenkins-library/issues), but don't expect all the features of the Jenkins library
 * A set of [Docker images][devops-docker-images] to setup a CI/CD environment in minutes using sophisticated life-cycle management
 
 To find out which offering is right for you, we recommend to look at the ready-made pipelines first.
@@ -56,7 +56,7 @@ methods/types needs to be announced, discussed and agreed.
 
 
 [github]: https://github.com
-[piper-library]: https://github.com/SAP/jenkins-library
+[piper-library]: https://github.com/HoffmannThomas/jenkins-library
 [cloud-sdk-pipeline]: pipelines/cloud-sdk/introduction/
 [devops-docker-images]: https://github.com/SAP/devops-docker-images
 [devops-docker-images-issues]:       https://github.com/SAP/devops-docker-images/issues
@@ -64,7 +64,7 @@ methods/types needs to be announced, discussed and agreed.
 [piper-library-scenario]: scenarios/ui5-sap-cp/Readme/
 [piper-doc-extensibility]: extensibility
 [piper-library-pages-plugins]: requiredPlugins
-[piper-library-issues]: https://github.com/SAP/jenkins-library/issues
+[piper-library-issues]: https://github.com/HoffmannThomas/jenkins-library/issues
 [piper-library-license]: ./LICENSE
 [piper-library-contribution]: .github/CONTRIBUTING.md
 [jenkins-doc-pipelines]: https://jenkins.io/solutions/pipeline

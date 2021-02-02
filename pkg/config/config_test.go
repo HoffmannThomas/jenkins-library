@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/piperenv"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperenv"
 	"github.com/stretchr/testify/assert"
 )
 

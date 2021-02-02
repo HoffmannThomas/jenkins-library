@@ -16,7 +16,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	piperHttp "github.com/SAP/jenkins-library/pkg/http"
+	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 )
 
 func spinUpServer(f func(http.ResponseWriter, *http.Request)) (*SystemInstance, *httptest.Server) {

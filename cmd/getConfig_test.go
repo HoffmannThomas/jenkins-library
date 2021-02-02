@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/config"
+	"github.com/HoffmannThomas/jenkins-library/pkg/config"
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 	"github.com/stretchr/testify/assert"

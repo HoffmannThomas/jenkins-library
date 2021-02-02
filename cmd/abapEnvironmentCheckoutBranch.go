@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/abaputils"
-	"github.com/SAP/jenkins-library/pkg/command"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/abaputils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/pkg/errors"
 )
 
@@ -29,7 +29,7 @@ func abapEnvironmentCheckoutBranch(options abapEnvironmentCheckoutBranchOptions,
 
 	client := piperhttp.Client{}
 
-	// for http calls import  piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	// for http calls import  piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	// and use a  &piperhttp.Client{} in a custom system
 	// Example: step checkmarxExecuteScan.go
 

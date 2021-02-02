@@ -25,7 +25,7 @@ The annotation `@Library('piper-lib-os')` is a reference to the Jenkins Configur
 @Library('piper-lib-os@v1.53.0') _
 ```
 
-An Overview of the releases of the Piper Library can be found [here](https://github.com/SAP/jenkins-library/releases).
+An Overview of the releases of the Piper Library can be found [here](https://github.com/HoffmannThomas/jenkins-library/releases).
 
 ## 3. Manifest for Service Creation
 

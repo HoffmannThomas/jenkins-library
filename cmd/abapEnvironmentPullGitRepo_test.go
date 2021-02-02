@@ -3,7 +3,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/abaputils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/abaputils"
 	"github.com/pkg/errors"
 
 	"github.com/stretchr/testify/assert"

@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	piperHttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
+	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/sirupsen/logrus"
 )
 

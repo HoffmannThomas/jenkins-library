@@ -3,7 +3,7 @@ package nexus
 import (
 	"errors"
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"strings"
 )
 

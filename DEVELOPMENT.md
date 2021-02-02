@@ -114,15 +114,15 @@ Examples are:
 
 There are certain extensions:
 
-* **aliases** allow alternative parameter names also supporting deeper configuration structures. [Example](https://github.com/SAP/jenkins-library/blob/master/resources/metadata/kubernetesdeploy.yaml)
-* **resources** allow to read for example from a shared `commonPipelineEnvironment` which contains information which has been provided by a previous step in the pipeline via an output. [Example](https://github.com/SAP/jenkins-library/blob/master/resources/metadata/githubrelease.yaml)
-* **secrets** allow to specify references to Jenkins credentials which can be used in the `groovy` library. [Example](https://github.com/SAP/jenkins-library/blob/master/resources/metadata/kubernetesdeploy.yaml)
+* **aliases** allow alternative parameter names also supporting deeper configuration structures. [Example](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/metadata/kubernetesdeploy.yaml)
+* **resources** allow to read for example from a shared `commonPipelineEnvironment` which contains information which has been provided by a previous step in the pipeline via an output. [Example](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/metadata/githubrelease.yaml)
+* **secrets** allow to specify references to Jenkins credentials which can be used in the `groovy` library. [Example](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/metadata/kubernetesdeploy.yaml)
 * **outputs** allow to write to dedicated outputs like
 
-  * Influx metrics. [Example](https://github.com/SAP/jenkins-library/blob/master/resources/metadata/checkmarx.yaml)
+  * Influx metrics. [Example](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/metadata/checkmarx.yaml)
   * Sharing data via `commonPipelineEnvironment` which can be used by another step as input
 
-* **conditions** allow for example to specify in which case a certain container is used (depending on a configuration parameter). [Example](https://github.com/SAP/jenkins-library/blob/master/resources/metadata/kubernetesdeploy.yaml)
+* **conditions** allow for example to specify in which case a certain container is used (depending on a configuration parameter). [Example](https://github.com/HoffmannThomas/jenkins-library/blob/master/resources/metadata/kubernetesdeploy.yaml)
 
 ## Best practices for writing piper-go steps
 
@@ -166,7 +166,7 @@ It can conveniently be accessed through:
 
 ```golang
 import (
-    "github.com/SAP/jenkins-library/pkg/log"
+    "github.com/HoffmannThomas/jenkins-library/pkg/log"
 )
 
 func myStep ...
@@ -270,7 +270,7 @@ functions. Here is an example to illustrate:
 
 ```golang
 import (
-    "github.com/SAP/jenkins-library/pkg/piperutils"
+    "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 )
 
 type myStepUtils interface {
@@ -367,7 +367,7 @@ An alternative approach are global function pointers:
 
 ```golang
 import (
-    FileUtils "github.com/SAP/jenkins-library/pkg/piperutils"
+    FileUtils "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 )
 
 var fileUtilsExists = FileUtils.FileExists

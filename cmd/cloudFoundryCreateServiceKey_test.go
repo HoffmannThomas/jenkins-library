@@ -3,9 +3,9 @@ package cmd
 import (
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/cloudfoundry"
-	"github.com/SAP/jenkins-library/pkg/mock"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/cloudfoundry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )

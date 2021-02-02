@@ -26,9 +26,9 @@ import (
 	"github.com/piper-validation/fortify-client-go/fortify/saved_report_controller"
 	"github.com/piper-validation/fortify-client-go/models"
 
-	piperHttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
@@ -77,7 +77,7 @@ type SystemInstance struct {
 // NewSystemInstance - creates an returns a new SystemInstance
 func NewSystemInstance(serverURL, apiEndpoint, authToken string, timeout time.Duration) *SystemInstance {
 	// If serverURL ends in a trailing slash, UploadResultFile() will construct a URL with two or more
-	// consecutive slashes and actually fail with a 503. https://github.com/SAP/jenkins-library/issues/1826
+	// consecutive slashes and actually fail with a 503. https://github.com/HoffmannThomas/jenkins-library/issues/1826
 	// Also, since the step outputs a lot of URLs to the log, those will look nicer without redundant slashes.
 	serverURL = strings.TrimRight(serverURL, "/")
 	format := strfmt.Default

@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/SAP/jenkins-library/pkg/config"
+	"github.com/HoffmannThomas/jenkins-library/pkg/config"
 	"github.com/ghodss/yaml"
 )
 

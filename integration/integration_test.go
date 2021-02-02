@@ -6,13 +6,13 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"io"
 	"os"
 	"path"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
 	"github.com/stretchr/testify/assert"
 
 	"io/ioutil"

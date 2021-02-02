@@ -2,7 +2,7 @@ package maven
 
 import (
 	"fmt"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"os"

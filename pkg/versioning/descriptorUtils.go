@@ -3,8 +3,8 @@ package versioning
 import (
 	"github.com/Masterminds/sprig"
 
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 )
 
 const (

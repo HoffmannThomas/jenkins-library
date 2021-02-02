@@ -140,4 +140,4 @@ extra_css:
     - 'css/extra.css'
 edit_uri: edit/master/documentation/docs
 site_dir: docs-gen
-repo_url: https://github.com/SAP/jenkins-library
+repo_url: https://github.com/HoffmannThomas/jenkins-library

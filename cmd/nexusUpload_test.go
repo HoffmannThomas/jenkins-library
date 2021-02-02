@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/maven"
-	"github.com/SAP/jenkins-library/pkg/mock"
-	"github.com/SAP/jenkins-library/pkg/nexus"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/maven"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/nexus"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"path/filepath"

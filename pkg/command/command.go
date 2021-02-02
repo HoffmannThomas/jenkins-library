@@ -10,7 +10,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/pkg/errors"
 )
 

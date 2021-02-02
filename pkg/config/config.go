@@ -9,8 +9,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 
 	"github.com/ghodss/yaml"
 	"github.com/google/go-cmp/cmp"

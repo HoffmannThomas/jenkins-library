@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/SAP/jenkins-library/pkg/generator/helper"
+	"github.com/HoffmannThomas/jenkins-library/pkg/generator/helper"
 )
 
 func main() {

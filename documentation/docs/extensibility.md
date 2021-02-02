@@ -4,7 +4,7 @@ When using one of the ready-made pipelines of project "Piper", you don't have to
 The pipelines are centrally maintained and can be used with only a small amount of declarative configuration as documented [here](configuration.md).
 
 For the vast majority of _standard_ projects, the features of the ready-made pipelines should be enough to implement [Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) with little effort in a best-practice compliant way.
-If you miss a feature or discover a bug in one of our pipelines, please see if there is already an [open issue in our GitHub repository](https://github.com/SAP/jenkins-library/issues) and if not, open a new one.
+If you miss a feature or discover a bug in one of our pipelines, please see if there is already an [open issue in our GitHub repository](https://github.com/HoffmannThomas/jenkins-library/issues) and if not, open a new one.
 
 In some cases, it's not desirable to include specialized features in the ready-made pipelines.
 However, you can still benefit from their qualities, if you address your requirements through an **extension**.
@@ -27,7 +27,7 @@ To do so, create a file called `<StageName>.groovy` (for example, `Acceptance.gr
 
 For this, you need to know the technical identifiers for stage names.
 
-* For the general purpose pipeline, you can find them in [the pipeline source file](https://github.com/SAP/jenkins-library/blob/master/vars/piperPipeline.groovy).
+* For the general purpose pipeline, you can find them in [the pipeline source file](https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/piperPipeline.groovy).
 * For the SAP Cloud SDK pipeline, you can find them in [this GitHub search query](https://github.com/SAP/cloud-s4-sdk-pipeline-lib/search?q=%22def+stageName+%3D%22).
 
 The centrally maintained pipeline checks if such a file exists and if it does, executes it.
@@ -146,12 +146,12 @@ void call(parameters) {
 
 The actual pipeline code (the `call` method in the listing above) can be found here:
 
-* [General purpose pipeline](https://github.com/SAP/jenkins-library/blob/master/vars/piperPipeline.groovy)
+* [General purpose pipeline](https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/piperPipeline.groovy)
 * [SAP Cloud SDK pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline-lib/blob/master/vars/cloudSdkPipeline.groovy)
 
 !!! note "Use the correct shared library definition"
     Which shared library you need depends on the pipeline you're using.<br />
-    For the [general purpose pipeline](https://github.com/SAP/jenkins-library/blob/master/vars/piperPipeline.groovy), you need `'piper-lib-os'`.<br />
+    For the [general purpose pipeline](https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/piperPipeline.groovy), you need `'piper-lib-os'`.<br />
     For the [SAP Cloud SDK pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline-lib/blob/master/vars/cloudSdkPipeline.groovy), you need `'s4sdk-pipeline-library'`.
 
 For the version identifier, please see the section _How to stay up-to-date_ in this document.
@@ -172,7 +172,7 @@ A minimal example of such a library could have the following directory structure
 ./README.md
 ```
 
-`myCustomPipeline.groovy` contains the modified pipeline code of the [general purpose pipeline](https://github.com/SAP/jenkins-library/blob/master/vars/piperPipeline.groovy) or [SAP Cloud SDK Pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline-lib/blob/master/vars/cloudSdkPipeline.groovy).
+`myCustomPipeline.groovy` contains the modified pipeline code of the [general purpose pipeline](https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/piperPipeline.groovy) or [SAP Cloud SDK Pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline-lib/blob/master/vars/cloudSdkPipeline.groovy).
 
 !!! note
     The name of your custom pipeline _must_ differ from the other pipelines provided by project "Piper" because Jenkins requires names across multiple libraries to be unique.
@@ -209,7 +209,7 @@ Please be aware that stages may have dependencies on each other.
     The downside is that in rare cases, breaking changes might happen.
     Another potential issue is that your builds are not _repeatable_, that means building the same version of your application twice _might_ have a different result.
     For those reasons, you might want to consider to fix versions to a released version like in this example: `@Library('my-shared-library@v1.0') _`<br />
-    Find the most recent release for the [jenkins-library](https://github.com/SAP/jenkins-library/releases) and for the [SAP Cloud SDK Pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline/releases) on GitHub.
+    Find the most recent release for the [jenkins-library](https://github.com/HoffmannThomas/jenkins-library/releases) and for the [SAP Cloud SDK Pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline/releases) on GitHub.
     To stay up to date with the latest releases, you can ["watch" releases for those repositories on GitHub](https://help.github.com/en/github/receiving-notifications-about-activity-on-github/watching-and-unwatching-releases-for-a-repository).
 
 !!! note "When to go with a modified ready-made pipeline"

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
 	"github.com/stretchr/testify/assert"
 	"io"
 	"io/ioutil"

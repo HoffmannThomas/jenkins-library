@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -10,12 +10,12 @@ import (
 	"time"
 
 	"github.com/360EntSecGroup-Skylar/excelize/v2"
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
-	"github.com/SAP/jenkins-library/pkg/versioning"
-	"github.com/SAP/jenkins-library/pkg/whitesource"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/versioning"
+	"github.com/HoffmannThomas/jenkins-library/pkg/whitesource"
 )
 
 // just to make the lines less long
@@ -215,7 +215,7 @@ func checkSecurityViolations(config *ScanOptions, sys *System) error {
 		return err
 	}
 
-	// https://github.com/SAP/jenkins-library/blob/master/vars/whitesourceExecuteScan.groovy#L537
+	// https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/whitesourceExecuteScan.groovy#L537
 	for _, alert := range alerts {
 		vuln := alert.Vulnerability
 		if (vuln.Score >= cvssSeverityLimit || vuln.CVSS3Score >= cvssSeverityLimit) && cvssSeverityLimit >= 0 {
@@ -223,7 +223,7 @@ func checkSecurityViolations(config *ScanOptions, sys *System) error {
 		}
 	}
 
-	//https://github.com/SAP/jenkins-library/blob/master/vars/whitesourceExecuteScan.groovy#L547
+	//https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/whitesourceExecuteScan.groovy#L547
 	nonSevereVulnerabilities := len(alerts) - severeVulnerabilities
 	if nonSevereVulnerabilities > 0 {
 		log.Entry().Warnf("WARNING: %v Open Source Software Security vulnerabilities with "+
@@ -234,7 +234,7 @@ func checkSecurityViolations(config *ScanOptions, sys *System) error {
 			config.ProjectName)
 	}
 
-	// https://github.com/SAP/jenkins-library/blob/master/vars/whitesourceExecuteScan.groovy#L558
+	// https://github.com/HoffmannThomas/jenkins-library/blob/master/vars/whitesourceExecuteScan.groovy#L558
 	if severeVulnerabilities > 0 {
 		return fmt.Errorf("%v Open Source Software Security vulnerabilities with CVSS score greater "+
 			"or equal to %s detected in project %s",

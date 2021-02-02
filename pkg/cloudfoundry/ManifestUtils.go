@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"reflect"
 
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 )
 
 const constPropApplications = "applications"

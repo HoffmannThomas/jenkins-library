@@ -8,10 +8,10 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
-	"github.com/SAP/jenkins-library/pkg/versioning"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/versioning"
 	"github.com/pkg/errors"
 
 	"github.com/go-git/go-git/v5"
@@ -181,7 +181,7 @@ func getGitCommitID(repository gitRepository) (plumbing.Hash, string, error) {
 		return plumbing.Hash{}, "", errors.Wrap(err, "failed to retrieve git commit ID")
 	}
 	// ToDo not too elegant to retrieve the commit message here, must be refactored sooner than later
-	// but to quickly address https://github.com/SAP/jenkins-library/pull/1515 let's revive this
+	// but to quickly address https://github.com/HoffmannThomas/jenkins-library/pull/1515 let's revive this
 	commitObject, err := repository.CommitObject(*commitID)
 	if err != nil {
 		return *commitID, "", errors.Wrap(err, "failed to retrieve git commit message")

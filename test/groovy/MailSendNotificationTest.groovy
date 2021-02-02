@@ -137,7 +137,7 @@ user3@domain.com noreply+github@domain.com'''
             result: 'FAILURE',
             rawBuild: [
                 getLog: { cnt -> return ['Setting http proxy: proxy.domain.com:8080',
-' > git fetch --no-tags --progress https://github.com/SAP/jenkins-library.git +refs/heads/*:refs/remotes/origin/*',
+' > git fetch --no-tags --progress https://github.com/HoffmannThomas/jenkins-library.git +refs/heads/*:refs/remotes/origin/*',
 'Checking out Revision myUniqueCommitId (master)',
 ' > git config core.sparsecheckout # timeout=10',
 ' > git checkout -f myUniqueCommitId',
@@ -172,7 +172,7 @@ user3@domain.com noreply+github@domain.com'''
         assertThat(emailParameters.to, is('piper@domain.com'))
         assertThat(emailParameters.subject, is('FAILURE: Build testProjectName testDisplayName'))
         assertThat(emailParameters.body, startsWith('<a href="http://build.url">http://build.url</a>\n<br>\nTo have a detailed look at the different pipeline stages: <a href="null">null</a>\n<br>\n<h3>Last lines of output</h3>'))
-        assertThat(emailParameters.body, containsString(' > git fetch --no-tags --progress https://github.com/SAP/jenkins-library.git +refs/heads/*:refs/remotes/origin/*'))
+        assertThat(emailParameters.body, containsString(' > git fetch --no-tags --progress https://github.com/HoffmannThomas/jenkins-library.git +refs/heads/*:refs/remotes/origin/*'))
         assertJobStatusSuccess()
     }
 

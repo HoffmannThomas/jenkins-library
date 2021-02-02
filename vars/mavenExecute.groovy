@@ -28,7 +28,7 @@ def call(Map parameters = [:]) {
         if (!fileExists(outputFile)) {
             error "[$STEP_NAME] Internal error. A text file with the contents of the maven output was expected " +
                 "but does not exist at '$outputFile'. " +
-                "Please file a ticket at https://github.com/SAP/jenkins-library/issues/new/choose"
+                "Please file a ticket at https://github.com/HoffmannThomas/jenkins-library/issues/new/choose"
         }
         output = readFile(outputFile)
     }

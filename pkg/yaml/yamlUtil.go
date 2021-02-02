@@ -3,8 +3,8 @@ package yaml
 import (
 	"bytes"
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"gopkg.in/yaml.v2"
 	"io"
 	"os"

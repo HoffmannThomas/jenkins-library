@@ -5,8 +5,8 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"io/ioutil"
 	"math/rand"
 	"os"

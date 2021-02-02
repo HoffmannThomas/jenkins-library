@@ -4,7 +4,7 @@ package mock
 
 import (
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"github.com/bmatcuk/doublestar"
 	"os"
 	"path/filepath"

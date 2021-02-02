@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"errors"
-	"github.com/SAP/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/stretchr/testify/assert"
 )
 

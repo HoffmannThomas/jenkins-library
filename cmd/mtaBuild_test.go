@@ -1,15 +1,15 @@
 package cmd
 
 import (
-	"github.com/SAP/jenkins-library/pkg/npm"
+	"github.com/HoffmannThomas/jenkins-library/pkg/npm"
 	"os"
 	"testing"
 
 	"fmt"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/maven"
-	"github.com/SAP/jenkins-library/pkg/mock"
-	"github.com/SAP/jenkins-library/pkg/piperutils"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/maven"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"github.com/ghodss/yaml"
 	"github.com/stretchr/testify/assert"
 )

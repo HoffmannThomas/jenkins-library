@@ -3,9 +3,9 @@ package cmd
 import (
 	"strings"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 )
 
 func karmaExecuteTests(config karmaExecuteTestsOptions, telemetryData *telemetry.CustomData) {

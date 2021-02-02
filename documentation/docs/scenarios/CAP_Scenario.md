@@ -55,7 +55,7 @@ If your project is not based on the _SAP Cloud Platform Business Application_ We
 * You have installed the multi-target application plug-in for the Cloud Foundry command line interface. See [Install the Multi-Target Application Plug-in in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/27f3af39c2584d4ea8c15ba8c282fd75.html).
 * You have installed the Java Runtime Environment 8.
 * You have installed Jenkins 2.60.3 or higher.
-* You have set up Project “Piper”. See [README](https://github.com/SAP/jenkins-library/blob/master/README.md).
+* You have set up Project “Piper”. See [README](https://github.com/HoffmannThomas/jenkins-library/blob/master/README.md).
 * You have installed the Multi-Target Application (MTA) Archive Builder 1.0.6 or newer. See [SAP Development Tools](https://tools.hana.ondemand.com/#cloud).
 * You have installed Node.js including node and npm. See [Node.js](https://nodejs.org/en/download/).
 

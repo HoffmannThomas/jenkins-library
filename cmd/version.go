@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/spf13/cobra"
 	"os"
 )

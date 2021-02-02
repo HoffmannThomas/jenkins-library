@@ -10,14 +10,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SAP/jenkins-library/pkg/command"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	FileUtils "github.com/SAP/jenkins-library/pkg/piperutils"
-	SliceUtils "github.com/SAP/jenkins-library/pkg/piperutils"
-	StepResults "github.com/SAP/jenkins-library/pkg/piperutils"
-	SonarUtils "github.com/SAP/jenkins-library/pkg/sonar"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	FileUtils "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	SliceUtils "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	StepResults "github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
+	SonarUtils "github.com/HoffmannThomas/jenkins-library/pkg/sonar"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/pkg/errors"
 )
 
@@ -211,7 +211,7 @@ func loadCertificates(certificateList []string, client piperhttp.Downloader, run
 		log.Entry().WithField("trust store", trustStoreFile).Info("Using local trust store")
 	} else
 	//TODO: certificate loading is deactivated due to the missing JAVA keytool
-	// see https://github.com/SAP/jenkins-library/issues/1072
+	// see https://github.com/HoffmannThomas/jenkins-library/issues/1072
 	if os.Getenv("PIPER_SONAR_LOAD_CERTIFICATES") == "true" && len(certificateList) > 0 {
 		// use local created trust store with downloaded certificates
 		keytoolOptions := []string{

@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	piperDocker "github.com/SAP/jenkins-library/pkg/docker"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	piperDocker "github.com/HoffmannThomas/jenkins-library/pkg/docker"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 
 	"github.com/pkg/errors"
 )

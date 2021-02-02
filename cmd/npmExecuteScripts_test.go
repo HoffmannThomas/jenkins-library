@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/SAP/jenkins-library/pkg/mock"
-	"github.com/SAP/jenkins-library/pkg/npm"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/npm"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

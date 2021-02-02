@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/SAP/jenkins-library/pkg/command"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
 )
 
 type ExecMockRunner struct {

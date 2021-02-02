@@ -4,11 +4,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 
-	"github.com/SAP/jenkins-library/pkg/mock"
+	"github.com/HoffmannThomas/jenkins-library/pkg/mock"
 
-	"github.com/SAP/jenkins-library/pkg/maven"
+	"github.com/HoffmannThomas/jenkins-library/pkg/maven"
 	"github.com/stretchr/testify/assert"
 )
 

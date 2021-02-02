@@ -6,15 +6,15 @@ import (
 	"net/http/cookiejar"
 
 	"github.com/Jeffail/gabs/v2"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/pkg/errors"
 )
 
 func gctsCloneRepository(config gctsCloneRepositoryOptions, telemetryData *telemetry.CustomData) {
 
-	// for http calls import  piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	// for http calls import  piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	// and use a  &piperhttp.Client{} in a custom system
 	// Example: step checkmarxExecuteScan.go
 	httpClient := &piperhttp.Client{}

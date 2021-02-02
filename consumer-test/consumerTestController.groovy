@@ -200,7 +200,7 @@ def changeDoesNotNeedConsumerTesting() {
 
     def excludesRegex = '(' + EXCLUDED_FROM_CONSUMER_TESTING_REGEXES.join('|') + ')'
 
-    "git remote add sap https://github.com/SAP/jenkins-library.git".execute().waitFor()
+    "git remote add sap https://github.com/HoffmannThomas/jenkins-library.git".execute().waitFor()
     "git fetch sap".execute().waitFor()
     def diff = "git diff --name-only sap/master ${LIBRARY_VERSION_UNDER_TEST}".execute().text.trim()
 

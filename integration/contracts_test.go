@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/SAP/jenkins-library/pkg/generator/helper"
+	"github.com/HoffmannThomas/jenkins-library/pkg/generator/helper"
 	"github.com/stretchr/testify/assert"
 )
 

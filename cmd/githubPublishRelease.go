@@ -8,12 +8,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/google/go-github/v28/github"
 	"github.com/pkg/errors"
 
-	piperGithub "github.com/SAP/jenkins-library/pkg/github"
+	piperGithub "github.com/HoffmannThomas/jenkins-library/pkg/github"
 )
 
 type githubRepoClient interface {

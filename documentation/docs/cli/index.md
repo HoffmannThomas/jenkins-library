@@ -2,9 +2,9 @@
 
 The CLI is built using the go programming language and thus is distributed in a single binary file for Linux.
 
-The latest released version can be downloaded via `wget https://github.com/SAP/jenkins-library/releases/latest/download/piper`.
+The latest released version can be downloaded via `wget https://github.com/HoffmannThomas/jenkins-library/releases/latest/download/piper`.
 
-Specific versions an be downloaded from the [GitHub releases](https://github.com/SAP/jenkins-library/releases) page.
+Specific versions an be downloaded from the [GitHub releases](https://github.com/HoffmannThomas/jenkins-library/releases) page.
 
 Once available in `$PATH`, it is ready to use.
 

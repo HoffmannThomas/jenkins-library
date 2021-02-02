@@ -8,10 +8,10 @@ import (
 	"net/http/cookiejar"
 
 	gabs "github.com/Jeffail/gabs/v2"
-	"github.com/SAP/jenkins-library/pkg/command"
-	piperhttp "github.com/SAP/jenkins-library/pkg/http"
-	"github.com/SAP/jenkins-library/pkg/log"
-	"github.com/SAP/jenkins-library/pkg/telemetry"
+	"github.com/HoffmannThomas/jenkins-library/pkg/command"
+	piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/log"
+	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
 	"github.com/pkg/errors"
 )
 
@@ -22,7 +22,7 @@ func gctsCreateRepository(config gctsCreateRepositoryOptions, telemetryData *tel
 	c.Stdout(log.Writer())
 	c.Stderr(log.Writer())
 
-	// for http calls import  piperhttp "github.com/SAP/jenkins-library/pkg/http"
+	// for http calls import  piperhttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	// and use a  &piperhttp.Client{} in a custom system
 	// Example: step checkmarxExecuteScan.go
 	httpClient := &piperhttp.Client{}
