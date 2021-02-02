@@ -1,0 +1,15 @@
+package main
+
+//go:generate go run pkg/generator/step-metadata.go --metadataDir=./resources/metadata/ --targetDir=./cmd/
+
+import (
+<<<<<<< HEAD
+	"./cmd"
+=======
+	"github.com/HoffmannThomas/jenkins-library/cmd"
+>>>>>>> 3635ddeb74c74e5bc12cce397b43804964d8d227
+)
+
+func main() {
+	cmd.Execute()
+}
