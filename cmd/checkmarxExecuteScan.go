@@ -27,8 +27,8 @@ import (
 
 func checkmarxExecuteScan(config checkmarxExecuteScanOptions, telemetryData *telemetry.CustomData, influx *checkmarxExecuteScanInflux) {
 	client := &piperHttp.Client{}
-/* 	options := piperHttp.ClientOptions{MaxRetries: config.MaxRetries}
-	client.SetOptions(options) */
+ 	options := piperHttp.ClientOptions{MaxRetries: config.MaxRetries}
+	client.SetOptions(options) 
 	sys, err := checkmarx.NewSystemInstance(client, config.ServerURL, config.Username, config.Password)
 	if err != nil {
 		log.Entry().WithError(err).Fatalf("Failed to create Checkmarx client talking to URL %v", config.ServerURL)
@@ -146,10 +146,10 @@ func zipWorkspaceFiles(workspace, filterPattern string) (*os.File, error) {
 
 func uploadAndScan(config checkmarxExecuteScanOptions, sys checkmarx.System, project checkmarx.Project, workspace string, influx *checkmarxExecuteScanInflux) error {
 	previousScans, err := sys.GetScans(project.ID)
-	if err != nil /* && config.VerifyOnly */ {
+	if err != nil && config.VerifyOnly  {
 		log.Entry().Warnf("Cannot load scans for project %v, verification only mode aborted", project.Name)
 	}
-	if len(previousScans) > 0 /* && config.VerifyOnly */ {
+	if len(previousScans) > 0 && config.VerifyOnly {
 		err := verifyCxProjectCompliance(config, sys, previousScans[0].ID, workspace, influx)
 		if err != nil {
 			log.SetErrorCategory(log.ErrorCompliance)
@@ -290,28 +290,28 @@ func pollScanStatus(sys checkmarx.System, scan checkmarx.Scan) error {
 
 func reportToInflux(results map[string]interface{}, influx *checkmarxExecuteScanInflux) {
 	influx.checkmarx_data.fields.high_issues = strconv.Itoa(results["High"].(map[string]int)["Issues"])
-	influx.checkmarx_data.fields.high_not_false_postive = strconv.Itoa(results["High"].(map[string]int)["NotFalsePositive"])
+	influx.checkmarx_data.fields.high_not_false_positive = strconv.Itoa(results["High"].(map[string]int)["NotFalsePositive"])
 	influx.checkmarx_data.fields.high_not_exploitable = strconv.Itoa(results["High"].(map[string]int)["NotExploitable"])
 	influx.checkmarx_data.fields.high_confirmed = strconv.Itoa(results["High"].(map[string]int)["Confirmed"])
 	influx.checkmarx_data.fields.high_urgent = strconv.Itoa(results["High"].(map[string]int)["Urgent"])
 	influx.checkmarx_data.fields.high_proposed_not_exploitable = strconv.Itoa(results["High"].(map[string]int)["ProposedNotExploitable"])
 	influx.checkmarx_data.fields.high_to_verify = strconv.Itoa(results["High"].(map[string]int)["ToVerify"])
 	influx.checkmarx_data.fields.medium_issues = strconv.Itoa(results["Medium"].(map[string]int)["Issues"])
-	influx.checkmarx_data.fields.medium_not_false_postive = strconv.Itoa(results["Medium"].(map[string]int)["NotFalsePositive"])
+	influx.checkmarx_data.fields.medium_not_false_positive = strconv.Itoa(results["Medium"].(map[string]int)["NotFalsePositive"])
 	influx.checkmarx_data.fields.medium_not_exploitable = strconv.Itoa(results["Medium"].(map[string]int)["NotExploitable"])
 	influx.checkmarx_data.fields.medium_confirmed = strconv.Itoa(results["Medium"].(map[string]int)["Confirmed"])
 	influx.checkmarx_data.fields.medium_urgent = strconv.Itoa(results["Medium"].(map[string]int)["Urgent"])
 	influx.checkmarx_data.fields.medium_proposed_not_exploitable = strconv.Itoa(results["Medium"].(map[string]int)["ProposedNotExploitable"])
 	influx.checkmarx_data.fields.medium_to_verify = strconv.Itoa(results["Medium"].(map[string]int)["ToVerify"])
 	influx.checkmarx_data.fields.low_issues = strconv.Itoa(results["Low"].(map[string]int)["Issues"])
-	influx.checkmarx_data.fields.low_not_false_postive = strconv.Itoa(results["Low"].(map[string]int)["NotFalsePositive"])
+	influx.checkmarx_data.fields.low_not_false_positive = strconv.Itoa(results["Low"].(map[string]int)["NotFalsePositive"])
 	influx.checkmarx_data.fields.low_not_exploitable = strconv.Itoa(results["Low"].(map[string]int)["NotExploitable"])
 	influx.checkmarx_data.fields.low_confirmed = strconv.Itoa(results["Low"].(map[string]int)["Confirmed"])
 	influx.checkmarx_data.fields.low_urgent = strconv.Itoa(results["Low"].(map[string]int)["Urgent"])
 	influx.checkmarx_data.fields.low_proposed_not_exploitable = strconv.Itoa(results["Low"].(map[string]int)["ProposedNotExploitable"])
 	influx.checkmarx_data.fields.low_to_verify = strconv.Itoa(results["Low"].(map[string]int)["ToVerify"])
 	influx.checkmarx_data.fields.information_issues = strconv.Itoa(results["Information"].(map[string]int)["Issues"])
-	influx.checkmarx_data.fields.information_not_false_postive = strconv.Itoa(results["Information"].(map[string]int)["NotFalsePositive"])
+	influx.checkmarx_data.fields.information_not_false_positive = strconv.Itoa(results["Information"].(map[string]int)["NotFalsePositive"])
 	influx.checkmarx_data.fields.information_not_exploitable = strconv.Itoa(results["Information"].(map[string]int)["NotExploitable"])
 	influx.checkmarx_data.fields.information_confirmed = strconv.Itoa(results["Information"].(map[string]int)["Confirmed"])
 	influx.checkmarx_data.fields.information_urgent = strconv.Itoa(results["Information"].(map[string]int)["Urgent"])
@@ -321,7 +321,7 @@ func reportToInflux(results map[string]interface{}, influx *checkmarxExecuteScan
 	influx.checkmarx_data.fields.owner = results["Owner"].(string)
 	influx.checkmarx_data.fields.scan_id = results["ScanId"].(string)
 	influx.checkmarx_data.fields.project_id = results["ProjectId"].(string)
-	influx.checkmarx_data.fields.project_name = results["ProjectName"].(string)
+	influx.checkmarx_data.fields.projectName = results["ProjectName"].(string)
 	influx.checkmarx_data.fields.team = results["Team"].(string)
 	influx.checkmarx_data.fields.team_full_path_on_report_date = results["TeamFullPathOnReportDate"].(string)
 	influx.checkmarx_data.fields.scan_start = results["ScanStart"].(string)
