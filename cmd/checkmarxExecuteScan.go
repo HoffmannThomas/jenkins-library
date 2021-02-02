@@ -39,7 +39,6 @@ func checkmarxExecuteScan(config checkmarxExecuteScanOptions, telemetryData *tel
 }
 
 func runScan(config checkmarxExecuteScanOptions, sys checkmarx.System, workspace string, influx *checkmarxExecuteScanInflux) error {
-	log.Entry().Debugf("MY-LOG: --- BEGIN func runScan")
 	teamID := config.TeamID
 	if len(teamID) == 0 {
 		team, err := loadTeam(sys, config.TeamName)
@@ -57,14 +56,11 @@ func runScan(config checkmarxExecuteScanOptions, sys checkmarx.System, workspace
 			teamID = strconv.Itoa(teamIDInt)
 		}
 	}
-      	log.Entry().Debugf("MY-LOG: --- MID func runScan (between team and project)")
 	project, projectName, err := loadExistingProject(sys, config.ProjectName, config.PullRequestName, teamID)
 	if err != nil {
 		return errors.Wrap(err, "error when trying to load project")
 	}
-      	log.Entry().Debugf("MY-LOG: --- MID func runScan (between project and preset)")
 	if project.Name == projectName {
-         	log.Entry().Debugf("MY-LOG: --- MID func runScan (inside preset)")
 		log.Entry().Infof("Project %v exists...", projectName)
 		if len(config.Preset) > 0 {
 			presetID, _ := strconv.Atoi(config.Preset)
@@ -74,7 +70,6 @@ func runScan(config checkmarxExecuteScanOptions, sys checkmarx.System, workspace
 			}
 		}
 	} else {
-         	log.Entry().Debugf("MY-LOG: --- MID func runScan (inside create)")
 		log.Entry().Infof("Project %v does not exist, starting to create it...", projectName)
 		presetID, _ := strconv.Atoi(config.Preset)
 		project, err = createAndConfigureNewProject(sys, projectName, teamID, presetID, config.Preset, config.SourceEncoding)
@@ -83,12 +78,10 @@ func runScan(config checkmarxExecuteScanOptions, sys checkmarx.System, workspace
 		}
 	}
 
-       	log.Entry().Debugf("MY-LOG: --- MID func runScan (before uploadAndScan)")
 	err = uploadAndScan(config, sys, project, workspace, influx)
 	if err != nil {
 		return errors.Wrap(err, "failed to run scan and upload result")
 	}
-	log.Entry().Debugf("MY-LOG: --- END func runScan")
 	return nil
 }
 
@@ -153,21 +146,16 @@ func zipWorkspaceFiles(workspace, filterPattern string) (*os.File, error) {
 
 func uploadAndScan(config checkmarxExecuteScanOptions, sys checkmarx.System, project checkmarx.Project, workspace string, influx *checkmarxExecuteScanInflux) error {
 	previousScans, err := sys.GetScans(project.ID)
-	log.Entry().Debugf("MY-LOG: --- BEGIN func uploadAndScan")
 	if err != nil && config.VerifyOnly  {
-         	log.Entry().Debugf("MY-LOG: --- MID func uploadAndScan (inside first if)")
 		log.Entry().Warnf("Cannot load scans for project %v, verification only mode aborted", project.Name)
 	}
-	log.Entry().Debugf("MY-LOG: --- MID func uploadAndScan (between the ifs)")
 	if len(previousScans) > 0 && config.VerifyOnly {
-         	log.Entry().Debugf("MY-LOG: --- MID func uploadAndScan (inside second if)")
 		err := verifyCxProjectCompliance(config, sys, previousScans[0].ID, workspace, influx)
 		if err != nil {
 			log.SetErrorCategory(log.ErrorCompliance)
 			return errors.Wrapf(err, "project %v not compliant", project.Name)
 		}
 	} else {
-         	log.Entry().Debugf("MY-LOG: --- MID func uploadAndScan (inside first eise)")
 		zipFile, err := zipWorkspaceFiles(workspace, config.FilterPattern)
 		if err != nil {
 			return errors.Wrap(err, "failed to zip workspace files")
@@ -196,7 +184,6 @@ func uploadAndScan(config checkmarxExecuteScanOptions, sys checkmarx.System, pro
 
 		return triggerScan(config, sys, project, workspace, incremental, influx)
 	}
-	log.Entry().Debugf("MY-LOG: --- END func uploadAndScan")
 	return nil
 }
 
