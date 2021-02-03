@@ -17,7 +17,7 @@ import (
 	"encoding/xml"
 
 	"github.com/HoffmannThomas/jenkins-library/pkg/checkmarx"
-	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
+	"github.com/HoffmannThomas/jenkins-library/pkg/http"
 	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
@@ -140,6 +140,7 @@ func zipWorkspaceFiles(workspace, filterPattern string) (*os.File, error) {
 		return zipFile, errors.Wrap(err, "failed to create archive of project sources")
 	}
 	defer zipFile.Close()
+	log.Entry().Infof("Zipping files using pattern %v ...", projectName)
 	zipFolder(workspace, zipFile, patterns)
 	return zipFile, nil
 }
