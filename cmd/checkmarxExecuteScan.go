@@ -27,8 +27,8 @@ import (
 
 func checkmarxExecuteScan(config checkmarxExecuteScanOptions, telemetryData *telemetry.CustomData, influx *checkmarxExecuteScanInflux) {
 	client := &piperHttp.Client{}
- 	//options := piperHttp.ClientOptions{MaxRetries: config.MaxRetries}
-	//client.SetOptions(options) 
+ 	options := piperHttp.ClientOptions{MaxRetries: config.MaxRetries}
+	client.SetOptions(options) 
 	sys, err := checkmarx.NewSystemInstance(client, config.ServerURL, config.Username, config.Password)
 	if err != nil {
 		log.Entry().WithError(err).Fatalf("Failed to create Checkmarx client talking to URL %v", config.ServerURL)
