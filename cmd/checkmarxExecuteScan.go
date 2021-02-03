@@ -17,7 +17,7 @@ import (
 	"encoding/xml"
 
 	"github.com/HoffmannThomas/jenkins-library/pkg/checkmarx"
-	"github.com/HoffmannThomas/jenkins-library/pkg/http"
+	piperHttp "github.com/HoffmannThomas/jenkins-library/pkg/http"
 	"github.com/HoffmannThomas/jenkins-library/pkg/log"
 	"github.com/HoffmannThomas/jenkins-library/pkg/piperutils"
 	"github.com/HoffmannThomas/jenkins-library/pkg/telemetry"
