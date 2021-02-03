@@ -237,10 +237,6 @@ func (c *Client) initialize() *http.Client {
 		httpClient.Transport = transport
 	}
 
-	if c.transportSkipVerification {
-		c.logger.Debugf("TLS verification disabled")
-	}
-
 	c.logger.Debugf("Transport timeout: %v, max request duration: %v", c.transportTimeout, c.maxRequestDuration)
 
 	return httpClient
