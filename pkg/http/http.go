@@ -223,8 +223,8 @@ func (c *Client) initialize() *http.Client {
 	}
 
 	var httpClient *http.Client
-		Transport: transport,		if c.maxRetries > 0 {
-		Jar:       c.cookieJar,			retryClient := retryablehttp.NewClient()
+	if c.maxRetries > 0 {
+		retryClient := retryablehttp.NewClient()
 		retryClient.HTTPClient.Timeout = c.maxRequestDuration
 		retryClient.HTTPClient.Jar = c.cookieJar
 		retryClient.HTTPClient.Transport = transport
