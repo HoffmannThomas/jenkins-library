@@ -140,7 +140,7 @@ func zipWorkspaceFiles(workspace, filterPattern string) (*os.File, error) {
 		return zipFile, errors.Wrap(err, "failed to create archive of project sources")
 	}
 	defer zipFile.Close()
-	log.Entry().Infof("Zipping files using pattern %v ...", projectName)
+	log.Entry().Infof("Zipping files using pattern %v ...", patterns)
 	zipFolder(workspace, zipFile, patterns)
 	return zipFile, nil
 }
